@@ -1,0 +1,300 @@
+@prefix : <http://www.semanticweb.org/callysta/ontologies/2026/10/untitled-ontology-7/> .
+@prefix ofr: <ofr:https://w3id.org/ontofishrisk#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/callysta/ontologies/2026/10/untitled-ontology-7/> .
+
+<https://w3id.org/ontofishrisk> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ontofishrisk#hasFishingPermit
+:hasFishingPermit rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:range :FishingPermit ;
+                  rdfs:domain :FishingVessel .
+
+
+###  https://w3id.org/ontofishrisk#hasFishingTrip
+:hasFishingTrip rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:range :FishingTrip ;
+                rdfs:domain :FishingVessel .
+
+
+###  https://w3id.org/ontofishrisk#hasLandingReport
+:hasLandingReport rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:range :LandingReport ;
+                  rdfs:domain :FishingTrip .
+
+
+###  https://w3id.org/ontofishrisk#hasLogbookRecord
+:hasLogbookRecord rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/ontofishrisk#hasVMSRecord
+:hasVMSRecord rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:range :VMSRecord ;
+              rdfs:domain :FishingTrip .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/ontofishrisk#isFishingPermitOf
+:isFishingPermitOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontofishrisk#isFishingTripOf
+:isFishingTripOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontofishrisk#isLandingReportOf
+:isLandingReportOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontofishrisk#isLogbookRecordOf
+:isLogbookRecordOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontofishrisk#isVMSRecordOf
+:isVMSRecordOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontofishrisk#operatesInAreaOf
+:operatesInAreaOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/ontofishrisk#actualCatchWeight
+:actualCatchWeight rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :LandingReport ;
+                   rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/ontofishrisk#areaName
+:areaName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :FishingArea ;
+          rdfs:range xsd:string .
+
+
+###  https://w3id.org/ontofishrisk#arrivalDate
+:arrivalDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :FishingTrip ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#departureDate
+:departureDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :FishingTrip ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#fishingArea
+:fishingArea rdf:type owl:DatatypeProperty ;
+             rdfs:domain :FishingArea ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/ontofishrisk#fishingAreaCode
+:fishingAreaCode rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ontofishrisk#landedCatchWeightKg
+:landedCatchWeightKg rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :LandingReport ;
+                     rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/ontofishrisk#landingDate
+:landingDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :LandingReport ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#latitude
+:latitude rdf:type owl:DatatypeProperty ;
+          rdfs:domain :VMSRecord ;
+          rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/ontofishrisk#longitude
+:longitude rdf:type owl:DatatypeProperty ;
+           rdfs:domain :VMSRecord ;
+           rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/ontofishrisk#permitEndDate
+:permitEndDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :FishingPermit ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#permitStartDate
+:permitStartDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FishingPermit ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#permitValidity
+:permitValidity rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FishingPermit ;
+                rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/ontofishrisk#permit_Number
+:permit_Number rdf:type owl:DatatypeProperty ;
+               rdfs:domain :FishingPermit ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/ontofishrisk#recordTimestamp
+:recordTimestamp rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :VMSRecord ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#reportedCatchWeightKg
+:reportedCatchWeightKg rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :LogbookRecord ;
+                       rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/ontofishrisk#tripId
+:tripId rdf:type owl:DatatypeProperty ;
+        rdfs:domain :FishingTrip ;
+        rdfs:range xsd:string .
+
+
+###  https://w3id.org/ontofishrisk#vesselId
+:vesselId rdf:type owl:DatatypeProperty ;
+          rdfs:domain :FishingVessel ;
+          rdfs:range xsd:string ;
+          rdfs:comment "\"VSL001\"" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/ontofishrisk#FishingActivity
+:FishingActivity rdf:type owl:Class ;
+                 rdfs:subClassOf :FishingEntity .
+
+
+###  https://w3id.org/ontofishrisk#FishingArea
+:FishingArea rdf:type owl:Class .
+
+
+###  https://w3id.org/ontofishrisk#FishingEntity
+:FishingEntity rdf:type owl:Class .
+
+
+###  https://w3id.org/ontofishrisk#FishingPermit
+:FishingPermit rdf:type owl:Class .
+
+
+###  https://w3id.org/ontofishrisk#FishingTrip
+:FishingTrip rdf:type owl:Class ;
+             rdfs:subClassOf :FishingEntity .
+
+
+###  https://w3id.org/ontofishrisk#FishingVessel
+:FishingVessel rdf:type owl:Class ;
+               rdfs:subClassOf :FishingEntity .
+
+
+###  https://w3id.org/ontofishrisk#LandingReport
+:LandingReport rdf:type owl:Class .
+
+
+###  https://w3id.org/ontofishrisk#LogbookRecord
+:LogbookRecord rdf:type owl:Class .
+
+
+###  https://w3id.org/ontofishrisk#VMSRecord
+:VMSRecord rdf:type owl:Class .
+
+
+###  https://w3id.org/ontofishrisk#WPPNRI
+:WPPNRI rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ontofishrisk#Landing_001
+:Landing_001 rdf:type owl:NamedIndividual ,
+                      :LandingReport ;
+             :landedCatchWeightKg 650.0 ;
+             :landingDate "2026-11-15T18:00:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#Logbook_001
+:Logbook_001 rdf:type owl:NamedIndividual ,
+                      :LogbookRecord ;
+             :isLogbookRecordOf :Trip_001 ;
+             :reportedCatchWeightKg 500.0 .
+
+
+###  https://w3id.org/ontofishrisk#Permit_001
+:Permit_001 rdf:type owl:NamedIndividual ,
+                     :FishingPermit ;
+            :permitEndDate "2026-12-31T23:59:59"^^xsd:dateTime ;
+            :permitStartDate "2026-01-01T00:00:00"^^xsd:dateTime ;
+            :permit_Number "IZIN-001" .
+
+
+###  https://w3id.org/ontofishrisk#Trip_001
+:Trip_001 rdf:type owl:NamedIndividual ,
+                   :FishingTrip ;
+          :isFishingTripOf :Vessel001 ;
+          :vesselId "TRIP001" .
+
+
+###  https://w3id.org/ontofishrisk#VMS_001
+:VMS_001 rdf:type owl:NamedIndividual ,
+                  :VMSRecord ;
+         :isVMSRecordOf :Trip_001 ;
+         :latitude -5.500 ;
+         :longitude 112.500 ;
+         :recordTimestamp "2026-11-12T08:30:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/ontofishrisk#Vessel001
+:Vessel001 rdf:type owl:NamedIndividual ,
+                    :FishingVessel ;
+           :isFishingPermitOf :Vessel001 ;
+           :vesselId "Vessel1" .
+
+
+###  https://w3id.org/ontofishrisk#Vessel_001
+:Vessel_001 rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontofishrisk#WPPNRI_712
+:WPPNRI_712 rdf:type owl:NamedIndividual ,
+                     :WPPNRI ;
+            :operatesInAreaOf :Trip_001 ;
+            :areaName "Laut Jawa" ;
+            :fishingAreaCode 712 .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

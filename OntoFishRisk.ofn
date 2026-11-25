@@ -1,0 +1,254 @@
+Prefix(:=<http://www.semanticweb.org/callysta/ontologies/2026/10/untitled-ontology-7/>)
+Prefix(ofr:=<ofr:https://w3id.org/ontofishrisk#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://w3id.org/ontofishrisk>
+
+Declaration(Class(<https://w3id.org/ontofishrisk#FishingActivity>))
+Declaration(Class(<https://w3id.org/ontofishrisk#FishingArea>))
+Declaration(Class(<https://w3id.org/ontofishrisk#FishingEntity>))
+Declaration(Class(<https://w3id.org/ontofishrisk#FishingPermit>))
+Declaration(Class(<https://w3id.org/ontofishrisk#FishingTrip>))
+Declaration(Class(<https://w3id.org/ontofishrisk#FishingVessel>))
+Declaration(Class(<https://w3id.org/ontofishrisk#LandingReport>))
+Declaration(Class(<https://w3id.org/ontofishrisk#LogbookRecord>))
+Declaration(Class(<https://w3id.org/ontofishrisk#VMSRecord>))
+Declaration(Class(<https://w3id.org/ontofishrisk#WPPNRI>))
+Declaration(ObjectProperty(<https://w3id.org/ontofishrisk#isFishingPermitOf>))
+Declaration(ObjectProperty(<https://w3id.org/ontofishrisk#isFishingTripOf>))
+Declaration(ObjectProperty(<https://w3id.org/ontofishrisk#isLandingReportOf>))
+Declaration(ObjectProperty(<https://w3id.org/ontofishrisk#isLogbookRecordOf>))
+Declaration(ObjectProperty(<https://w3id.org/ontofishrisk#isVMSRecordOf>))
+Declaration(ObjectProperty(<https://w3id.org/ontofishrisk#operatesInAreaOf>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#actualCatchWeight>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#areaName>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#arrivalDate>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#departureDate>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#fishingArea>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#fishingAreaCode>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#landedCatchWeightKg>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#landingDate>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#latitude>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#longitude>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#permitEndDate>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#permitStartDate>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#permitValidity>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#permit_Number>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#recordTimestamp>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#reportedCatchWeightKg>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#tripId>))
+Declaration(DataProperty(<https://w3id.org/ontofishrisk#vesselId>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#Landing_001>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#Logbook_001>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#Permit_001>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#Trip_001>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#VMS_001>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#Vessel001>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#Vessel_001>))
+Declaration(NamedIndividual(<https://w3id.org/ontofishrisk#WPPNRI_712>))
+Declaration(AnnotationProperty(owl:topObjectProperty))
+Declaration(AnnotationProperty(<https://w3id.org/ontofishrisk#hasFishingPermit>))
+Declaration(AnnotationProperty(<https://w3id.org/ontofishrisk#hasFishingTrip>))
+Declaration(AnnotationProperty(<https://w3id.org/ontofishrisk#hasLandingReport>))
+Declaration(AnnotationProperty(<https://w3id.org/ontofishrisk#hasLogbookRecord>))
+Declaration(AnnotationProperty(<https://w3id.org/ontofishrisk#hasVMSRecord>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <https://w3id.org/ontofishrisk#hasFishingPermit> (<https://w3id.org/ontofishrisk#hasFishingPermit>)
+
+SubAnnotationPropertyOf(<https://w3id.org/ontofishrisk#hasFishingPermit> owl:topObjectProperty)
+AnnotationPropertyRange(<https://w3id.org/ontofishrisk#hasFishingPermit> <https://w3id.org/ontofishrisk#FishingPermit>)
+AnnotationPropertyDomain(<https://w3id.org/ontofishrisk#hasFishingPermit> <https://w3id.org/ontofishrisk#FishingVessel>)
+
+# Annotation Property: <https://w3id.org/ontofishrisk#hasFishingTrip> (<https://w3id.org/ontofishrisk#hasFishingTrip>)
+
+SubAnnotationPropertyOf(<https://w3id.org/ontofishrisk#hasFishingTrip> owl:topObjectProperty)
+AnnotationPropertyRange(<https://w3id.org/ontofishrisk#hasFishingTrip> <https://w3id.org/ontofishrisk#FishingTrip>)
+AnnotationPropertyDomain(<https://w3id.org/ontofishrisk#hasFishingTrip> <https://w3id.org/ontofishrisk#FishingVessel>)
+
+# Annotation Property: <https://w3id.org/ontofishrisk#hasLandingReport> (<https://w3id.org/ontofishrisk#hasLandingReport>)
+
+SubAnnotationPropertyOf(<https://w3id.org/ontofishrisk#hasLandingReport> owl:topObjectProperty)
+AnnotationPropertyRange(<https://w3id.org/ontofishrisk#hasLandingReport> <https://w3id.org/ontofishrisk#LandingReport>)
+AnnotationPropertyDomain(<https://w3id.org/ontofishrisk#hasLandingReport> <https://w3id.org/ontofishrisk#FishingTrip>)
+
+# Annotation Property: <https://w3id.org/ontofishrisk#hasLogbookRecord> (<https://w3id.org/ontofishrisk#hasLogbookRecord>)
+
+SubAnnotationPropertyOf(<https://w3id.org/ontofishrisk#hasLogbookRecord> owl:topObjectProperty)
+
+# Annotation Property: <https://w3id.org/ontofishrisk#hasVMSRecord> (<https://w3id.org/ontofishrisk#hasVMSRecord>)
+
+SubAnnotationPropertyOf(<https://w3id.org/ontofishrisk#hasVMSRecord> owl:topObjectProperty)
+AnnotationPropertyRange(<https://w3id.org/ontofishrisk#hasVMSRecord> <https://w3id.org/ontofishrisk#VMSRecord>)
+AnnotationPropertyDomain(<https://w3id.org/ontofishrisk#hasVMSRecord> <https://w3id.org/ontofishrisk#FishingTrip>)
+
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <https://w3id.org/ontofishrisk#actualCatchWeight> (<https://w3id.org/ontofishrisk#actualCatchWeight>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#actualCatchWeight> <https://w3id.org/ontofishrisk#LandingReport>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#actualCatchWeight> xsd:decimal)
+
+# Data Property: <https://w3id.org/ontofishrisk#areaName> (<https://w3id.org/ontofishrisk#areaName>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#areaName> <https://w3id.org/ontofishrisk#FishingArea>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#areaName> xsd:string)
+
+# Data Property: <https://w3id.org/ontofishrisk#arrivalDate> (<https://w3id.org/ontofishrisk#arrivalDate>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#arrivalDate> <https://w3id.org/ontofishrisk#FishingTrip>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#arrivalDate> xsd:dateTime)
+
+# Data Property: <https://w3id.org/ontofishrisk#departureDate> (<https://w3id.org/ontofishrisk#departureDate>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#departureDate> <https://w3id.org/ontofishrisk#FishingTrip>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#departureDate> xsd:dateTime)
+
+# Data Property: <https://w3id.org/ontofishrisk#fishingArea> (<https://w3id.org/ontofishrisk#fishingArea>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#fishingArea> <https://w3id.org/ontofishrisk#FishingArea>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#fishingArea> xsd:string)
+
+# Data Property: <https://w3id.org/ontofishrisk#landedCatchWeightKg> (<https://w3id.org/ontofishrisk#landedCatchWeightKg>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#landedCatchWeightKg> <https://w3id.org/ontofishrisk#LandingReport>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#landedCatchWeightKg> xsd:decimal)
+
+# Data Property: <https://w3id.org/ontofishrisk#landingDate> (<https://w3id.org/ontofishrisk#landingDate>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#landingDate> <https://w3id.org/ontofishrisk#LandingReport>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#landingDate> xsd:dateTime)
+
+# Data Property: <https://w3id.org/ontofishrisk#latitude> (<https://w3id.org/ontofishrisk#latitude>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#latitude> <https://w3id.org/ontofishrisk#VMSRecord>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#latitude> xsd:decimal)
+
+# Data Property: <https://w3id.org/ontofishrisk#longitude> (<https://w3id.org/ontofishrisk#longitude>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#longitude> <https://w3id.org/ontofishrisk#VMSRecord>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#longitude> xsd:decimal)
+
+# Data Property: <https://w3id.org/ontofishrisk#permitEndDate> (<https://w3id.org/ontofishrisk#permitEndDate>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#permitEndDate> <https://w3id.org/ontofishrisk#FishingPermit>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#permitEndDate> xsd:dateTime)
+
+# Data Property: <https://w3id.org/ontofishrisk#permitStartDate> (<https://w3id.org/ontofishrisk#permitStartDate>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#permitStartDate> <https://w3id.org/ontofishrisk#FishingPermit>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#permitStartDate> xsd:dateTime)
+
+# Data Property: <https://w3id.org/ontofishrisk#permitValidity> (<https://w3id.org/ontofishrisk#permitValidity>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#permitValidity> <https://w3id.org/ontofishrisk#FishingPermit>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#permitValidity> xsd:boolean)
+
+# Data Property: <https://w3id.org/ontofishrisk#permit_Number> (<https://w3id.org/ontofishrisk#permit_Number>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#permit_Number> <https://w3id.org/ontofishrisk#FishingPermit>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#permit_Number> xsd:string)
+
+# Data Property: <https://w3id.org/ontofishrisk#recordTimestamp> (<https://w3id.org/ontofishrisk#recordTimestamp>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#recordTimestamp> <https://w3id.org/ontofishrisk#VMSRecord>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#recordTimestamp> xsd:dateTime)
+
+# Data Property: <https://w3id.org/ontofishrisk#reportedCatchWeightKg> (<https://w3id.org/ontofishrisk#reportedCatchWeightKg>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#reportedCatchWeightKg> <https://w3id.org/ontofishrisk#LogbookRecord>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#reportedCatchWeightKg> xsd:decimal)
+
+# Data Property: <https://w3id.org/ontofishrisk#tripId> (<https://w3id.org/ontofishrisk#tripId>)
+
+DataPropertyDomain(<https://w3id.org/ontofishrisk#tripId> <https://w3id.org/ontofishrisk#FishingTrip>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#tripId> xsd:string)
+
+# Data Property: <https://w3id.org/ontofishrisk#vesselId> (<https://w3id.org/ontofishrisk#vesselId>)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/ontofishrisk#vesselId> "\"VSL001\"")
+DataPropertyDomain(<https://w3id.org/ontofishrisk#vesselId> <https://w3id.org/ontofishrisk#FishingVessel>)
+DataPropertyRange(<https://w3id.org/ontofishrisk#vesselId> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://w3id.org/ontofishrisk#FishingActivity> (<https://w3id.org/ontofishrisk#FishingActivity>)
+
+SubClassOf(<https://w3id.org/ontofishrisk#FishingActivity> <https://w3id.org/ontofishrisk#FishingEntity>)
+
+# Class: <https://w3id.org/ontofishrisk#FishingTrip> (<https://w3id.org/ontofishrisk#FishingTrip>)
+
+SubClassOf(<https://w3id.org/ontofishrisk#FishingTrip> <https://w3id.org/ontofishrisk#FishingEntity>)
+
+# Class: <https://w3id.org/ontofishrisk#FishingVessel> (<https://w3id.org/ontofishrisk#FishingVessel>)
+
+SubClassOf(<https://w3id.org/ontofishrisk#FishingVessel> <https://w3id.org/ontofishrisk#FishingEntity>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <https://w3id.org/ontofishrisk#Landing_001> (<https://w3id.org/ontofishrisk#Landing_001>)
+
+ClassAssertion(<https://w3id.org/ontofishrisk#LandingReport> <https://w3id.org/ontofishrisk#Landing_001>)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#landedCatchWeightKg> <https://w3id.org/ontofishrisk#Landing_001> "650.0"^^xsd:decimal)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#landingDate> <https://w3id.org/ontofishrisk#Landing_001> "2026-11-15T18:00:00"^^xsd:dateTime)
+
+# Individual: <https://w3id.org/ontofishrisk#Logbook_001> (<https://w3id.org/ontofishrisk#Logbook_001>)
+
+ClassAssertion(<https://w3id.org/ontofishrisk#LogbookRecord> <https://w3id.org/ontofishrisk#Logbook_001>)
+ObjectPropertyAssertion(<https://w3id.org/ontofishrisk#isLogbookRecordOf> <https://w3id.org/ontofishrisk#Logbook_001> <https://w3id.org/ontofishrisk#Trip_001>)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#reportedCatchWeightKg> <https://w3id.org/ontofishrisk#Logbook_001> "500.0"^^xsd:decimal)
+
+# Individual: <https://w3id.org/ontofishrisk#Permit_001> (<https://w3id.org/ontofishrisk#Permit_001>)
+
+ClassAssertion(<https://w3id.org/ontofishrisk#FishingPermit> <https://w3id.org/ontofishrisk#Permit_001>)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#permitEndDate> <https://w3id.org/ontofishrisk#Permit_001> "2026-12-31T23:59:59"^^xsd:dateTime)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#permitStartDate> <https://w3id.org/ontofishrisk#Permit_001> "2026-01-01T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#permit_Number> <https://w3id.org/ontofishrisk#Permit_001> "IZIN-001")
+
+# Individual: <https://w3id.org/ontofishrisk#Trip_001> (<https://w3id.org/ontofishrisk#Trip_001>)
+
+ClassAssertion(<https://w3id.org/ontofishrisk#FishingTrip> <https://w3id.org/ontofishrisk#Trip_001>)
+ObjectPropertyAssertion(<https://w3id.org/ontofishrisk#isFishingTripOf> <https://w3id.org/ontofishrisk#Trip_001> <https://w3id.org/ontofishrisk#Vessel001>)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#vesselId> <https://w3id.org/ontofishrisk#Trip_001> "TRIP001")
+
+# Individual: <https://w3id.org/ontofishrisk#VMS_001> (<https://w3id.org/ontofishrisk#VMS_001>)
+
+ClassAssertion(<https://w3id.org/ontofishrisk#VMSRecord> <https://w3id.org/ontofishrisk#VMS_001>)
+ObjectPropertyAssertion(<https://w3id.org/ontofishrisk#isVMSRecordOf> <https://w3id.org/ontofishrisk#VMS_001> <https://w3id.org/ontofishrisk#Trip_001>)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#latitude> <https://w3id.org/ontofishrisk#VMS_001> "-5.500"^^xsd:decimal)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#longitude> <https://w3id.org/ontofishrisk#VMS_001> "112.500"^^xsd:decimal)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#recordTimestamp> <https://w3id.org/ontofishrisk#VMS_001> "2026-11-12T08:30:00"^^xsd:dateTime)
+
+# Individual: <https://w3id.org/ontofishrisk#Vessel001> (<https://w3id.org/ontofishrisk#Vessel001>)
+
+ClassAssertion(<https://w3id.org/ontofishrisk#FishingVessel> <https://w3id.org/ontofishrisk#Vessel001>)
+ObjectPropertyAssertion(<https://w3id.org/ontofishrisk#isFishingPermitOf> <https://w3id.org/ontofishrisk#Vessel001> <https://w3id.org/ontofishrisk#Vessel001>)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#vesselId> <https://w3id.org/ontofishrisk#Vessel001> "Vessel1")
+
+# Individual: <https://w3id.org/ontofishrisk#WPPNRI_712> (<https://w3id.org/ontofishrisk#WPPNRI_712>)
+
+ClassAssertion(<https://w3id.org/ontofishrisk#WPPNRI> <https://w3id.org/ontofishrisk#WPPNRI_712>)
+ObjectPropertyAssertion(<https://w3id.org/ontofishrisk#operatesInAreaOf> <https://w3id.org/ontofishrisk#WPPNRI_712> <https://w3id.org/ontofishrisk#Trip_001>)
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#areaName> <https://w3id.org/ontofishrisk#WPPNRI_712> "Laut Jawa")
+DataPropertyAssertion(<https://w3id.org/ontofishrisk#fishingAreaCode> <https://w3id.org/ontofishrisk#WPPNRI_712> "712"^^xsd:integer)
+
+
+)

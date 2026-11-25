@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/ontofishrisk"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/ontofishrisk">
+    <Prefix name="" IRI="http://www.semanticweb.org/callysta/ontologies/2026/10/untitled-ontology-7/"/>
+    <Prefix name="ofr" IRI="ofr:https://w3id.org/ontofishrisk#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#FishingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FishingArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FishingEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FishingPermit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FishingTrip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FishingVessel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LandingReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LogbookRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VMSRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WPPNRI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFishingPermitOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFishingTripOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLandingReportOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLogbookRecordOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVMSRecordOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#operatesInAreaOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#actualCatchWeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#areaName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#arrivalDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#departureDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fishingArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fishingAreaCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#landedCatchWeightKg"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#landingDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#latitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#longitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#permitEndDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#permitStartDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#permitValidity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#permit_Number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#recordTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#reportedCatchWeightKg"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tripId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#vesselId"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Landing_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Logbook_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Permit_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trip_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VMS_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vessel001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vessel_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WPPNRI_712"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasFishingPermit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasFishingTrip"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasLandingReport"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasLogbookRecord"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasVMSRecord"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#FishingActivity"/>
+        <Class IRI="#FishingEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FishingTrip"/>
+        <Class IRI="#FishingEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FishingVessel"/>
+        <Class IRI="#FishingEntity"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#LandingReport"/>
+        <NamedIndividual IRI="#Landing_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LogbookRecord"/>
+        <NamedIndividual IRI="#Logbook_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FishingPermit"/>
+        <NamedIndividual IRI="#Permit_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FishingTrip"/>
+        <NamedIndividual IRI="#Trip_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VMSRecord"/>
+        <NamedIndividual IRI="#VMS_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FishingVessel"/>
+        <NamedIndividual IRI="#Vessel001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WPPNRI"/>
+        <NamedIndividual IRI="#WPPNRI_712"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLogbookRecordOf"/>
+        <NamedIndividual IRI="#Logbook_001"/>
+        <NamedIndividual IRI="#Trip_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFishingTripOf"/>
+        <NamedIndividual IRI="#Trip_001"/>
+        <NamedIndividual IRI="#Vessel001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isVMSRecordOf"/>
+        <NamedIndividual IRI="#VMS_001"/>
+        <NamedIndividual IRI="#Trip_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFishingPermitOf"/>
+        <NamedIndividual IRI="#Vessel001"/>
+        <NamedIndividual IRI="#Vessel001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#operatesInAreaOf"/>
+        <NamedIndividual IRI="#WPPNRI_712"/>
+        <NamedIndividual IRI="#Trip_001"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#landedCatchWeightKg"/>
+        <NamedIndividual IRI="#Landing_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">650.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#landingDate"/>
+        <NamedIndividual IRI="#Landing_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-15T18:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#reportedCatchWeightKg"/>
+        <NamedIndividual IRI="#Logbook_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#permitEndDate"/>
+        <NamedIndividual IRI="#Permit_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2026-12-31T23:59:59</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#permitStartDate"/>
+        <NamedIndividual IRI="#Permit_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#permit_Number"/>
+        <NamedIndividual IRI="#Permit_001"/>
+        <Literal>IZIN-001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vesselId"/>
+        <NamedIndividual IRI="#Trip_001"/>
+        <Literal>TRIP001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#latitude"/>
+        <NamedIndividual IRI="#VMS_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">-5.500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#longitude"/>
+        <NamedIndividual IRI="#VMS_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">112.500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#recordTimestamp"/>
+        <NamedIndividual IRI="#VMS_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-12T08:30:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vesselId"/>
+        <NamedIndividual IRI="#Vessel001"/>
+        <Literal>Vessel1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#areaName"/>
+        <NamedIndividual IRI="#WPPNRI_712"/>
+        <Literal>Laut Jawa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fishingAreaCode"/>
+        <NamedIndividual IRI="#WPPNRI_712"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">712</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyDomain>
+        <DataProperty IRI="#actualCatchWeight"/>
+        <Class IRI="#LandingReport"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#areaName"/>
+        <Class IRI="#FishingArea"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#arrivalDate"/>
+        <Class IRI="#FishingTrip"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#departureDate"/>
+        <Class IRI="#FishingTrip"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fishingArea"/>
+        <Class IRI="#FishingArea"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#landedCatchWeightKg"/>
+        <Class IRI="#LandingReport"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#landingDate"/>
+        <Class IRI="#LandingReport"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#latitude"/>
+        <Class IRI="#VMSRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#longitude"/>
+        <Class IRI="#VMSRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#permitEndDate"/>
+        <Class IRI="#FishingPermit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#permitStartDate"/>
+        <Class IRI="#FishingPermit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#permitValidity"/>
+        <Class IRI="#FishingPermit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#permit_Number"/>
+        <Class IRI="#FishingPermit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#recordTimestamp"/>
+        <Class IRI="#VMSRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#reportedCatchWeightKg"/>
+        <Class IRI="#LogbookRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tripId"/>
+        <Class IRI="#FishingTrip"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#vesselId"/>
+        <Class IRI="#FishingVessel"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#actualCatchWeight"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#areaName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#arrivalDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#departureDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fishingArea"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#landedCatchWeightKg"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#landingDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#latitude"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#longitude"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#permitEndDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#permitStartDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#permitValidity"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#permit_Number"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#recordTimestamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#reportedCatchWeightKg"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tripId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#vesselId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#vesselId</IRI>
+        <Literal>&quot;VSL001&quot;</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#hasFishingPermit"/>
+        <AnnotationProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#hasFishingTrip"/>
+        <AnnotationProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#hasLandingReport"/>
+        <AnnotationProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#hasLogbookRecord"/>
+        <AnnotationProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#hasVMSRecord"/>
+        <AnnotationProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubAnnotationPropertyOf>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasFishingPermit"/>
+        <IRI>#FishingPermit</IRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasFishingTrip"/>
+        <IRI>#FishingTrip</IRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasLandingReport"/>
+        <IRI>#LandingReport</IRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasVMSRecord"/>
+        <IRI>#VMSRecord</IRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="#hasFishingPermit"/>
+        <IRI>#FishingVessel</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="#hasFishingTrip"/>
+        <IRI>#FishingVessel</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="#hasLandingReport"/>
+        <IRI>#FishingTrip</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="#hasVMSRecord"/>
+        <IRI>#FishingTrip</IRI>
+    </AnnotationPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
